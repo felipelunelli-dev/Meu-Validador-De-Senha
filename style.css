@@ -6,15 +6,26 @@
 }
 
 
-body {
-    background-image: url(./img/background.jpg);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    z-index: 0;
+ .video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
 }
+
+.video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+     
 
 
 h1 {
@@ -31,6 +42,7 @@ h1 {
     width: 600px;
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 250px 500px 0px 600px 
 }
 
 input {
